@@ -506,3 +506,19 @@ li {
   }
 
 }
+
+@media (max-width: 360px) {
+
+  #form {
+    margin: 0;
+  }
+
+  .fare-box {
+    height: auto;
+  }
+
+  #fares-boxes button {
+    margin-top: 30px;
+  }
+
+}

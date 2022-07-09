@@ -5,5 +5,4 @@ This new repo for Legendary Motorsport, is intended as a practice for html Forms
 
 Fully coded on vsCode and uploaded almost finished.
 
-MediaQueries will be committed as following: starting with max-width: 1024px following by max-width:768px and lastly max-width"480px...
-
+MediaQueries will be committed as following: starting with max-width: 1024px following by max-width: 768px, max-width: 480px and lastly max-width: 360px...

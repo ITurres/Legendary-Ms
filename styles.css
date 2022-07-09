@@ -476,3 +476,33 @@ li {
   }
 
 }
+
+@media (max-width: 480px) {
+
+  /*HEADER IMG SET ON LEFT AND ALL NAVLINKS TOGETHER ON THE RIGHT! GOOGLE A WAY TO DO THIS*/
+
+  .form-item {
+    height: 200px;
+  }
+
+  #info-boxes {
+    display: block;
+  }
+
+  .footer#contact {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #contact .footer-logo {
+    height: 60px;
+  }
+
+  #contact .telephone {
+    text-align: center;
+  }
+
+}

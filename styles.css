@@ -1,0 +1,431 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 70%;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: rgb(16, 16, 16);
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.nav-bar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+/*With the container above we solve the
+ issue of the header overflowing
+which was styled below,
+ and commented out for the reason explained*/
+
+/* 
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13%;
+    margin: 0 20px 0 20px;
+    font-size: 1.4rem;
+    position: absolute;
+    width: 97vw;
+} */
+
+#header-img {
+  width: 18%;
+  object-fit: cover;
+  padding: 10px;
+}
+
+#header #nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  margin: 0 10px 0 10px;
+  /*the property margin above and its values, make
+    the navbar not centered if the values
+    exceed 10px for each side,
+    deleting the prop and val completly will be a solution,
+    however, we need them or when the screen its smaller
+    so sides wont touch end of screen*/
+  font-size: 1.4rem;
+}
+
+#nav-bar .nav-link:first-of-type {
+  padding-right: 20px; /*do not modify value
+    since it will move navbar to the right*/
+}
+
+#header .nav-link {
+  color: azure;
+  font-size: 1.4rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .header-video video {
+    position: absolute;
+    position: relative;
+    z-index: 1;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+} */ /*BETTER USE CLASS porche-video*/
+
+.porche-video {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* background-image: url(img-video_files/form-BG-carbon-fiber.webp); */
+  background-size: cover;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  background-color: #191919;
+  border-radius: 100px;
+  min-width: 300px;
+  margin-left: 20%;
+  margin-right: 20%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  overflow: hidden; /* hides overflow of h2 when shrink - FIX! */
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+
+.form-heading {
+  /* color: #efefef; */
+  background: -webkit-linear-gradient(180deg,#fff,
+   rgb(199, 196, 196), rgb(168, 105, 105), rgb(198, 67, 67), rgb(232, 20, 20));
+  -webkit-background-clip: text; /*gives error, FIX SOON!!*/
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  max-width: 700px;
+  word-spacing: 10px;
+  line-height: 1.1;
+  text-align: center;
+
+}
+
+#form #email {
+  margin: 15px 5px 15px 5px;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #651818;
+}
+
+#form #email:hover {
+  border: 2px solid #be2626;
+  margin: 13px 3px 13px 3px !important;
+  /*IMPORTANT > when hover, the container moves cause
+    of the margins set on form email, therefore,
+    on hover has been removed the margins 2px added on border*/
+}
+
+#form #submit {
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #651818;
+  background-color: #efefef;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+#form #submit:hover {
+  background-color: rgb(16, 16, 16);
+  color: #efefef;
+  border: 1px solid #be2626;
+  padding: 9px 19px 9px 19px !important;
+  /*IMPORTANT > when hover, the container moves cause of the
+    paddings set on form submit, therefore,
+    on hover has been removed the padding 1px added on border*/
+}
+
+.first-divider {
+  width: 70%;
+  margin: auto;
+  margin-top: 130px;
+  margin-bottom: 70px;
+  border-radius: 3px;
+  border: solid #651818;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+#info-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /*for flex g-s porpuses*/
+  padding: 20px 0 20px 0;
+  margin: 25px 0 25px 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-width: 350px; 
+    width: 350px; */ /*with min-width and width,
+    items couldn shrink*/
+  padding: 25px 30px 25px 30px;
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+/*code below: used when there was not flex: 1 1 250px;*/
+/* .box:last-of-type {
+    height: 215px;
+    overflow: visible;
+} */
+/*code above: used when there was not flex: 1 1 250px;*/
+
+.box .info-heading {
+  font-size: 2.5rem;
+}
+
+.first-letter.yellow,
+.orange,
+.red {
+  margin-left: 1rem;
+  font-size: 2.7rem;
+}
+
+.first-letter.yellow {
+  color: #ffcc00;
+}
+
+.first-letter.orange {
+  color: #ff7b00;
+}
+
+.first-letter.red {
+  color: #ff0000;
+}
+
+.box .info-p {
+  font-size: 1.8rem;
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: 600;
+  background-color: #1919198f;
+  border-radius: 25px;
+  width: fit-content;
+}
+
+.box.box-ultrafast .info-p {
+  font-size: 1.6rem;
+}
+
+.empty-divider {
+  min-height: 50px;
+  height: 100px;
+}
+
+/* FARES */
+
+.fares-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  min-height: 420px; /*gives height so wont overflow*/ /*CHECK DAYLI till finish project*/
+}
+
+#fares-boxes {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 10px 50px;
+  grid-template-areas:
+    "regular fast ultrafast"
+    "button-regular button-fast button-ultrafast";
+  /* height: fit-content; */
+  /* width: fit-content; */
+  /* width: 100%; IMPORTANT FOR FLEX-shrink */
+}
+
+.fare-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: fit-content; /*it might interfere with media queries! - change if needed*/
+  /* width: 300px; */ /*It overflows*/
+  margin: auto;
+  min-height: -webkit-fill-available;
+  border: solid white;
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+.fare-box.regular {
+  grid-area: regular;
+}
+
+.fare-box.fast {
+  grid-area: fast;
+}
+
+.fare-box.ultrafast {
+  grid-area: ultrafast;
+}
+
+.fare-box:last-of-type {
+  height: 310px;
+  overflow: hidden;
+}
+
+.fare-box .fare-heading {
+  font-size: 2.6rem;
+}
+
+.fare-box .fare-fare {
+  font-size: 2.1rem;
+  padding-bottom: 10px;
+}
+
+.fare-box .fare-info {
+  font-size: 1.8rem;
+  padding-bottom: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* margin-left: 30px; */
+  list-style-type: square;
+}
+
+li {
+  margin-left: 20px;
+}
+
+/*BUTTON'S STYLE*/
+
+.select-fare.button-regular {
+  grid-area: button-regular;
+}
+
+.select-fare.button-fast {
+  grid-area: button-fast;
+}
+
+.select-fare.button-ultrafast {
+  grid-area: button-ultrafast;
+}
+
+.select-fare .fa-regular.fa-circle-check {
+  font-size: 6rem;
+}
+
+.select-fare {
+  height: 75px;
+  width: 75px;
+  margin: auto;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #191919;
+  color: #efefef;
+}
+
+.select-fare.button-regular:hover {
+  background-color: #ffcc00;
+  color: #191919;
+}
+
+.select-fare.button-fast:hover {
+  background-color: #ff7b00;
+  color: #191919;
+}
+
+.select-fare.button-ultrafast:hover {
+  background-color: #ff0000;
+  color: #191919;
+}
+
+/*2nd OPTION*/
+/* .select-fare.button-regular:active {
+    background-color: #191919;
+    color: #ffcc00;
+}
+
+.select-fare.button-fast:active {
+    background-color: #191919;
+    color: #ff7b00;
+}
+
+.select-fare.button-ultrafast:active {
+    background-color: #191919;
+    color: #ff0000;
+} */
+
+.empty-divider.bottom-div {
+  margin-bottom: 25px;
+}
+
+.footer#contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #191919;
+  height: 50px;
+}
+
+#contact h5,
+.telephone {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  width: 44%;
+}
+
+#contact .footer-logo {
+  height: 40px;
+  width: auto;
+  padding: 2px;
+}
+
+#contact .telephone {
+  font-weight: 500;
+  width: 44%;
+}

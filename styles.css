@@ -442,3 +442,37 @@ li {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  #form {
+    margin: 0 10% 0 10%;
+  }
+
+  #fares-boxes {
+    display: block;
+  }
+
+  #fares-boxes button {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .fare-box {
+    height: 250px;
+    margin-top: 40px;
+  }
+
+  .fare-box:first-of-type {
+    margin-top: 0;
+  }
+
+  .footer#contact {
+    height: 100px;
+  }
+
+  #contact .footer-logo {
+    height: 60px;
+  }
+
+}
